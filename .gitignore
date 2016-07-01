@@ -1,4 +1,6 @@
 .htaccess
-.idea/*.*
 robots.txt
 .idea/copyright/profiles_settings.xml
+*.iml
+.idea/deployment.xml
+*.xml
