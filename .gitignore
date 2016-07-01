@@ -4,3 +4,12 @@ robots.txt
 *.iml
 .idea/deployment.xml
 *.xml
+composer.json
+
+/vendor/
+assets/plugins/bootstrap/.bower.json
+*.json
+assets/plugins/bootstrap/CHANGELOG.md
+assets/plugins/bootstrap/grunt/.jshintrc
+*.jscsrc
+*.jshintrc

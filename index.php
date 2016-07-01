@@ -1,4 +1,4 @@
 <?php 
 
+require_once  'vendor/autoload.php';
 
-echo "David Antonyan davidantonyan1981@gmail.com david";
