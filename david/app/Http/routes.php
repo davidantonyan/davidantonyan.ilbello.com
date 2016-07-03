@@ -14,3 +14,36 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Application Admin Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::group(['prefix'=>'admin','namespace' => 'Admin','middleware' => ['web']],function (){
+    Route::group(['prefix'=>'auth','namespace'=>'Auth'],function (){
+        Route::get('/login',[
+            'as' => 'admin.login',
+            'uses'=>'AuthController@showLoginForm'
+        ]);
+        Route::post('/login',[
+            'uses'=>'AuthController@login'
+        ]);
+        Route::get('/logout',[
+            'uses'=>'AuthController@logout'
+        ]);
+    });
+
+    Route::group(['prefix'=>'dashboard','namespace'=>'Dashboard'],function (){
+        Route::get('/',[
+            'as' => 'admin.dashboard',
+            'uses' => 'DashboardController@showDashboard'
+        ]);
+    });
+
+});
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

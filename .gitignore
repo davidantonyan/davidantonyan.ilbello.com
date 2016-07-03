@@ -8,3 +8,4 @@ robots.txt
 .idea/copyright/
 .idea/deployment.xml
 .idea/copyright/profiles_settings.xml
+/david/node_modules/
